@@ -124,7 +124,7 @@ const ROLES = [
     char: <CharCXO />,
     bullets: [
       "End-to-end attendee journey, arrival to exit",
-      "Text / WhatsApp helpdesk — no app, 126 languages, 30-second responses",
+      "Integration with AI Ambassador for Events — replaces the pesky conference app with SMS, WhatsApp, and RCS (coming soon)",
       "Session reminders and networking matches",
       "Captures sessions and debriefs via ActionNotes",
       "Generates the post-event NPS report",
