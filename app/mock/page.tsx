@@ -13,12 +13,13 @@ export default function MockPage() {
     <>
       <header className="topbar">
         <div className="topbar-inner">
-          <Link href="/" className="brand">
-            msg2ai<span className="dot">.</span>{" "}
+          <a href="https://msg2ai.xyz" className="brand" target="_blank" rel="noopener noreferrer">
+            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" />
+            <span>msg2ai<span className="dot">.</span></span>
             <small style={{ fontWeight: 400, color: "var(--ink-mute)", fontSize: 13, marginLeft: 10 }}>
               conference-team-skills · FutureStack 2026 mock
             </small>
-          </Link>
+          </a>
           <Link href="/" className="topnav" style={{ color: "var(--ink-soft)", textDecoration: "none", fontSize: 14 }}>
             ← back to landing page
           </Link>

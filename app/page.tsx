@@ -182,10 +182,10 @@ export default function HomePage() {
     <>
       <header className="topbar">
         <div className="topbar-inner">
-          <Link href="/" className="brand">
+          <a href="https://msg2ai.xyz" className="brand" target="_blank" rel="noopener noreferrer">
             <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" />
             <span>msg2ai<span className="dot">.</span></span>
-          </Link>
+          </a>
           <nav className="topnav">
             <a href="#team">Your AI team</a>
             <a href="#mock">Mock conference</a>
