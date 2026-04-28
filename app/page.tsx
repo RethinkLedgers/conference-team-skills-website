@@ -464,7 +464,49 @@ export default function HomePage() {
             </details>
             <details>
               <summary>What&apos;s the catch?</summary>
-              <div className="answer">There isn&apos;t one. We build AI tools for events at <a href="https://msg2ai.xyz">msg2ai.xyz</a>, and we open-sourced the skills because we wanted every conference team to have a real back office. If you end up using AI Ambassador or ActionNotes on show day, that&apos;s a paid product — everything else is free.</div>
+              <div className="answer">
+                <p>There isn&apos;t one. We build AI tools for events at <a href="https://msg2ai.xyz">msg2ai.xyz</a>, and we open-sourced the skills because we wanted every conference team to have a real back office. The skills, the mock conference, the website, the npm installer — all free, MIT licensed.</p>
+                <p style={{ marginTop: 14 }}>The way <a href="https://msg2ai.xyz">MSG2AI</a> makes money is by selling two paid products that the skills know how to call into on show day:</p>
+
+                <div className="product-plugs">
+                  <a className="product-plug" href="https://ai-ambassador.xyz">
+                    <span className="product-mark product-mark-aa" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 8c0-2.2 1.8-4 4-4h10c2.2 0 4 1.8 4 4v6c0 2.2-1.8 4-4 4h-6l-4 3v-3c-2.2 0-4-1.8-4-4z"/>
+                        <path d="M12 8l.7 1.4 1.5.3-1.1 1 .3 1.5L12 11.5l-1.4.7.3-1.5-1.1-1 1.5-.3z"/>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>AI Ambassador for Events</strong>
+                      <span className="product-tag">SMS · WhatsApp · RCS coming soon</span>
+                      <p>Replaces the pesky conference app. Answers every attendee question by text in 126 languages, sends session reminders, runs networking matches, and ships the post-event NPS — all in 30-second responses, no download required.</p>
+                      <span className="product-link">ai-ambassador.xyz →</span>
+                    </div>
+                  </a>
+
+                  <a className="product-plug" href="https://actionnotes.ai">
+                    <span className="product-mark product-mark-an" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="4" y="3" width="16" height="18" rx="2"/>
+                        <path d="M8 8l2 2 3-3"/>
+                        <path d="M15 9h2"/>
+                        <path d="M8 14l2 2 3-3"/>
+                        <path d="M15 15h2"/>
+                      </svg>
+                    </span>
+                    <div>
+                      <strong>ActionNotes</strong>
+                      <span className="product-tag">AI session &amp; meeting capture</span>
+                      <p>Turns every session, panel, and committee debrief into structured notes, clear decisions, and assigned action items — automatically. The post-event report basically writes itself, and next year&apos;s organizer thanks you.</p>
+                      <span className="product-link">actionnotes.ai →</span>
+                    </div>
+                  </a>
+                </div>
+
+                <p style={{ marginTop: 14, fontSize: 14, color: "var(--ink-mute)" }}>
+                  Both are optional — the eight skills work fine without them. They&apos;re just where the skills hand off when the event itself starts running.
+                </p>
+              </div>
             </details>
           </div>
         </div>
