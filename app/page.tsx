@@ -229,7 +229,7 @@ export default function HomePage() {
               <strong>$0</strong>free, MIT licensed
             </div>
             <div className="item">
-              <strong>0 lines</strong>of code to install
+              <strong>1 command</strong>to install — or copy-paste in your browser
             </div>
           </div>
         </div>
