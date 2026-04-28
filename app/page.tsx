@@ -183,7 +183,8 @@ export default function HomePage() {
       <header className="topbar">
         <div className="topbar-inner">
           <Link href="/" className="brand">
-            msg2ai<span className="dot">.</span> <span className="version-badge">v1.0</span>
+            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" />
+            <span>msg2ai<span className="dot">.</span></span>
           </Link>
           <nav className="topnav">
             <a href="#team">Your AI team</a>
@@ -201,6 +202,7 @@ export default function HomePage() {
           <div className="eyebrow">
             <span className="pulse" />
             Free · 8 AI teammates · No code required
+            <span className="version-badge">v1.0</span>
           </div>
           <h1 className="display">
             8 Claude Skills <em>for your conference team.</em>
@@ -223,7 +225,7 @@ export default function HomePage() {
               <strong>8</strong>AI teammates, one per role
             </div>
             <div className="item">
-              <strong>30 sec</strong>to write your first board update
+              <strong>1 hour</strong>to score 60 speaker submissions for the Program Chair
             </div>
             <div className="item">
               <strong>$0</strong>free, MIT licensed
@@ -470,36 +472,22 @@ export default function HomePage() {
 
                 <div className="product-plugs">
                   <a className="product-plug" href="https://ai-ambassador.xyz">
-                    <span className="product-mark product-mark-aa" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M3 8c0-2.2 1.8-4 4-4h10c2.2 0 4 1.8 4 4v6c0 2.2-1.8 4-4 4h-6l-4 3v-3c-2.2 0-4-1.8-4-4z"/>
-                        <path d="M12 8l.7 1.4 1.5.3-1.1 1 .3 1.5L12 11.5l-1.4.7.3-1.5-1.1-1 1.5-.3z"/>
-                      </svg>
-                    </span>
-                    <div>
-                      <strong>AI Ambassador for Events</strong>
-                      <span className="product-tag">SMS · WhatsApp · RCS coming soon</span>
-                      <p>Replaces the pesky conference app. Answers every attendee question by text in 126 languages, sends session reminders, runs networking matches, and ships the post-event NPS — all in 30-second responses, no download required.</p>
-                      <span className="product-link">ai-ambassador.xyz →</span>
+                    <div className="product-logo-bar">
+                      <img src="/logos/ai-ambassador.png" alt="AI Ambassador for Events" className="product-logo product-logo-wide" />
                     </div>
+                    <span className="product-tag">SMS · WhatsApp · RCS coming soon</span>
+                    <p>Replaces the pesky conference app. Answers every attendee question by text in 126 languages, sends session reminders, runs networking matches, and ships the post-event NPS — all in 30-second responses, no download required.</p>
+                    <span className="product-link">ai-ambassador.xyz →</span>
                   </a>
 
                   <a className="product-plug" href="https://actionnotes.ai">
-                    <span className="product-mark product-mark-an" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="4" y="3" width="16" height="18" rx="2"/>
-                        <path d="M8 8l2 2 3-3"/>
-                        <path d="M15 9h2"/>
-                        <path d="M8 14l2 2 3-3"/>
-                        <path d="M15 15h2"/>
-                      </svg>
-                    </span>
-                    <div>
+                    <div className="product-logo-bar">
+                      <img src="/logos/actionnotes.png" alt="ActionNotes" className="product-logo product-logo-square" />
                       <strong>ActionNotes</strong>
-                      <span className="product-tag">AI session &amp; meeting capture</span>
-                      <p>Turns every session, panel, and committee debrief into structured notes, clear decisions, and assigned action items — automatically. The post-event report basically writes itself, and next year&apos;s organizer thanks you.</p>
-                      <span className="product-link">actionnotes.ai →</span>
                     </div>
+                    <span className="product-tag">AI session &amp; meeting capture</span>
+                    <p>Turns every session, panel, and committee debrief into structured notes, clear decisions, and assigned action items — automatically. The post-event report basically writes itself, and next year&apos;s organizer thanks you.</p>
+                    <span className="product-link">actionnotes.ai →</span>
                   </a>
                 </div>
 
