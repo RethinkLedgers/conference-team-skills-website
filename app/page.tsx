@@ -159,7 +159,7 @@ const MOCK_CARDS = [
   { num: "05", title: "Head of Operations · Tom Thompson", tag: "Floor plan · Vendor tracker · Minute-by-minute run-of-show", href: "/mock#venue-logistics" },
   { num: "06", title: "CFO · Amelia Okafor", tag: "Full P&L with scenarios · 4 ticket tiers · Sponsor invoice", href: "/mock#finance-registration" },
   { num: "07", title: "Chief Experience Officer · Lena Nguyen", tag: "20-question FAQ · AI Ambassador config · Post-event NPS", href: "/mock#attendee-experience" },
-  { num: "08", title: "Head of Web · Noor Khan", tag: "Next.js scaffold · Vercel deploy log · Merged event JSON", href: "/mock#vibe-coder", featured: true },
+  { num: "08", title: "Head of Web · Noor Khan", tag: "Next.js scaffold · Vercel deploy log · Merged event JSON", href: "/mock#vibe-coder" },
 ];
 
 const CONNECTORS = [
@@ -478,7 +478,7 @@ export default function HomePage() {
                 <li>Open Terminal and run:<br/><code style={{ background: "rgba(255,255,255,.1)", padding: "6px 10px", borderRadius: 6, display: "inline-block", marginTop: 8 }}>npx conference-team-skills install</code></li>
                 <li>Open Claude Code and start asking</li>
               </ol>
-              <a className="btn btn-primary" style={{ background: "white", color: "var(--ink)", marginTop: "auto" }} href="#paste">
+              <a className="btn btn-primary" style={{ background: "white", color: "var(--ink)", marginTop: "auto" }} href="#paste-claudecode">
                 Install guide <span className="arrow">→</span>
               </a>
             </div>
