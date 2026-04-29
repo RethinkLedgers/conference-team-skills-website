@@ -402,7 +402,7 @@ export default function HomePage() {
               <Link
                 key={c.num}
                 href={c.href}
-                className={`mock-card ${c.featured ? "mock-card-featured" : ""}`}
+                className="mock-card"
               >
                 <span className="mock-num">{c.num}</span>
                 <h4>{c.title}</h4>
