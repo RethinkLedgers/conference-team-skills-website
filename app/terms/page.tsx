@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Terms of Service · Conference Team Skills",
   description:
     "The Conference Team Skills are open source under the MIT license. By using them you agree to the terms below.",
+  alternates: { canonical: "/terms" },
+  robots: { index: true, follow: true },
 };
 
 export default function TermsPage() {

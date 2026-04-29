@@ -6,6 +6,19 @@ export const metadata: Metadata = {
   title: "FutureStack 2026 — Mock Conference · Conference Team Skills",
   description:
     "See what 8 Claude Skills produced for one fictional event — every artifact each skill actually generated for FutureStack 2026.",
+  alternates: { canonical: "/mock" },
+  openGraph: {
+    title: "FutureStack 2026 — a mock conference run by 8 Claude Skills",
+    description:
+      "Browse every artifact each skill produced — agendas, sponsor outreach, run-of-show, the merged event JSON, and more.",
+    url: "/mock",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FutureStack 2026 — a mock conference run by 8 Claude Skills",
+    description: "Browse every artifact each skill produced.",
+  },
 };
 
 export default function MockPage() {
@@ -14,7 +27,7 @@ export default function MockPage() {
       <header className="topbar">
         <div className="topbar-inner">
           <a href="https://msg2ai.xyz" className="brand" target="_blank" rel="noopener noreferrer">
-            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" />
+            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" width={32} height={32} />
             <span>msg2ai<span className="dot">.</span></span>
             <small style={{ fontWeight: 400, color: "var(--ink-mute)", fontSize: 13, marginLeft: 10 }}>
               conference-team-skills · FutureStack 2026 mock
