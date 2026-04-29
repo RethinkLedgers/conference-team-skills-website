@@ -17,7 +17,7 @@ export default function TermsPage() {
       <p className="lede">
         The Conference Team Skills are open source under the MIT license. By using them you agree to the terms below.
       </p>
-      <p className="meta">Last updated: April 28, 2026 · v1.0</p>
+      <p className="meta">Last updated: April 28, 2026 · v1.0.4</p>
 
       <h2>1. License — MIT</h2>
       <p>
@@ -41,7 +41,7 @@ export default function TermsPage() {
 
       <h2>4. Third-party services</h2>
       <p>
-        The skills are designed to work with third-party services — Claude (Anthropic), Google Drive, Gmail, Google Calendar, Dropbox, Notion, Vercel, GitHub, Stripe, Firecrawl, Canva, Zoom, Twenty CRM, ClickUp, Asana, Obsidian, AgentMail, AI Ambassador, ActionNotes, hello.msg2ai.xyz, and others. Your use of those services is governed by their own terms and privacy policies. We do not control them and are not responsible for their behavior or availability.
+        The skills are designed to work with third-party services — Claude (Anthropic), Google Drive, Gmail, Google Calendar, Dropbox, Notion, Vercel, GitHub, Stripe, Firecrawl, Canva, Zoom, Twenty CRM, ClickUp, Asana, Obsidian, AgentMail, AI Ambassador, ActionNotes, and others. Your use of those services is governed by their own terms and privacy policies. We do not control them and are not responsible for their behavior or availability.
       </p>
 
       <h2>5. Acceptable use</h2>

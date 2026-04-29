@@ -44,7 +44,7 @@ export default function MockPage() {
       <MockViewer />
 
       <footer style={{ padding: "40px 28px", textAlign: "center", color: "var(--ink-mute)", fontSize: 13, borderTop: "1px solid var(--line)" }}>
-        Conference Team Skills · v1.0 · Built by{" "}
+        Conference Team Skills · v1.0.4 · Built by{" "}
         <a href="https://msg2ai.xyz" style={{ color: "var(--ink-soft)" }}>MSG2AI</a> ·{" "}
         <a href="mailto:info@msg2ai.xyz" style={{ color: "var(--ink-soft)" }}>info@msg2ai.xyz</a>
         {" · "}

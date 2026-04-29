@@ -4,14 +4,14 @@ import { useState } from "react";
 
 const RAW_BASE = "https://raw.githubusercontent.com/msg2ai/conference-team-skills/main";
 const SKILL_NAMES = [
-  "general-chair",
-  "program-content",
-  "sponsorship",
-  "marketing-comms",
-  "venue-logistics",
-  "finance-registration",
-  "attendee-experience",
-  "vibe-coder",
+  "conference-general-chair",
+  "conference-program-chair",
+  "conference-sponsorship-lead",
+  "conference-marketing-comms",
+  "conference-venue-logistics",
+  "conference-finance-registration",
+  "conference-attendee-experience",
+  "conference-vibe-coder",
 ] as const;
 
 type Tab = "claudeai" | "claudecode" | "codex" | "cursor";
@@ -52,7 +52,7 @@ export default function PasteSection() {
                 <ol className="paste-steps">
                   <li>Sign in at <a href="https://claude.ai">claude.ai</a> (Pro, Team, or Enterprise — Free tier works for short tests).</li>
                   <li>Click <strong>Projects</strong> → <strong>Create Project</strong>. Name it after the role, e.g. <em>&ldquo;FutureStack — Sponsorship&rdquo;</em>.</li>
-                  <li>Open the SKILL.md file you want from the repo (e.g. <a href={`${RAW_BASE}/sponsorship/SKILL.md`}>sponsorship/SKILL.md</a>) and copy <strong>everything</strong>.</li>
+                  <li>Open the SKILL.md file you want from the repo (e.g. <a href={`${RAW_BASE}/conference-sponsorship-lead/SKILL.md`}>conference-sponsorship-lead/SKILL.md</a>) and copy <strong>everything</strong>.</li>
                   <li>In the Project, click <strong>Set instructions</strong> and paste it in.</li>
                   <li>Save. Every new chat in that Project is now your AI Sponsorship Lead.</li>
                 </ol>
@@ -116,7 +116,7 @@ npx conference-team-skills uninstall`}</pre>
                 <ol className="paste-steps" start={2}>
                   <li>Copy the SKILL.md into your repo as <code>AGENTS.md</code> so Codex picks it up automatically:</li>
                 </ol>
-                <pre className="paste-code">cp ~/conference-team-skills/sponsorship/SKILL.md ./AGENTS.md</pre>
+                <pre className="paste-code">cp ~/conference-team-skills/conference-sponsorship-lead/SKILL.md ./AGENTS.md</pre>
                 <ol className="paste-steps" start={3}>
                   <li>Start Codex from that directory — the skill becomes the active instruction set:</li>
                 </ol>
@@ -127,16 +127,16 @@ npx conference-team-skills uninstall`}</pre>
               <div className="paste-snippet">
                 <div className="paste-snippet-head">Quick swap</div>
                 <pre className="paste-code paste-code-block">{`# Conference Chair
-cp ~/conference-team-skills/general-chair/SKILL.md AGENTS.md
+cp ~/conference-team-skills/conference-general-chair/SKILL.md AGENTS.md
 
 # Program Director
-cp ~/conference-team-skills/program-content/SKILL.md AGENTS.md
+cp ~/conference-team-skills/conference-program-chair/SKILL.md AGENTS.md
 
 # CMO
-cp ~/conference-team-skills/marketing-comms/SKILL.md AGENTS.md
+cp ~/conference-team-skills/conference-marketing-comms/SKILL.md AGENTS.md
 
 # Vibe Coder (web)
-cp ~/conference-team-skills/vibe-coder/SKILL.md AGENTS.md`}</pre>
+cp ~/conference-team-skills/conference-vibe-coder/SKILL.md AGENTS.md`}</pre>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ cp ~/conference-team-skills/vibe-coder/SKILL.md AGENTS.md`}</pre>
                   <li>Save each SKILL.md as a separate <code>.mdc</code> rule:</li>
                 </ol>
                 <pre className="paste-code">{`curl -L -o .cursor/rules/sponsorship.mdc \\
-  ${RAW_BASE}/sponsorship/SKILL.md`}</pre>
+  ${RAW_BASE}/conference-sponsorship-lead/SKILL.md`}</pre>
                 <ol className="paste-steps" start={3}>
                   <li>Open Cursor → <strong>Settings → Cursor Settings → Rules</strong> and confirm the rule is active.</li>
                   <li>Open the chat panel and ask the role-specific question. Cursor will use the SKILL.md as system context.</li>
@@ -167,9 +167,9 @@ cp ~/conference-team-skills/vibe-coder/SKILL.md AGENTS.md`}</pre>
                 <div className="paste-snippet-head">All 8 rules at once</div>
                 <pre className="paste-code paste-code-block">{`mkdir -p .cursor/rules
 BASE=${RAW_BASE}
-for s in general-chair program-content sponsorship \\
-         marketing-comms venue-logistics finance-registration \\
-         attendee-experience vibe-coder; do
+for s in conference-general-chair conference-program-chair conference-sponsorship-lead \\
+         conference-marketing-comms conference-venue-logistics conference-finance-registration \\
+         conference-attendee-experience conference-vibe-coder; do
   curl -sL "$BASE/$s/SKILL.md" -o ".cursor/rules/$s.mdc"
 done`}</pre>
               </div>

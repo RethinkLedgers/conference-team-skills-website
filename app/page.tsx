@@ -165,7 +165,6 @@ const MOCK_CARDS = [
 const CONNECTORS = [
   { name: "Shared Knowledge Base", desc: "Drive / Dropbox / Notion — single source of truth." },
   { name: "Firecrawl", desc: "Scrape your event website to bootstrap the KB." },
-  { name: "hello.msg2ai.xyz", desc: "Upload the merged event JSON to go live." },
   { name: "Gmail", desc: "Send outreach, confirmations, invoices." },
   { name: "Google Calendar", desc: "Block milestones, schedule speaker calls." },
   { name: "Google Drive", desc: "Templates, contracts, meeting notes." },
@@ -202,7 +201,7 @@ export default function HomePage() {
           <div className="eyebrow">
             <span className="pulse" />
             Free · 8 AI teammates · No code required
-            <span className="version-badge">v1.0.3</span>
+            <span className="version-badge">v1.0.4</span>
           </div>
           <h1 className="display">
             8 Claude Skills <em>for your conference team.</em>
@@ -326,8 +325,8 @@ export default function HomePage() {
             </div>
             <div className="mock-meta-item">
               <span className="mock-meta-label">Concierge</span>
-              <strong>hello.msg2ai.xyz</strong>
-              <span className="mock-meta-sub">SMS + WhatsApp · 8 languages · AI Ambassador on</span>
+              <strong>AI Ambassador</strong>
+              <span className="mock-meta-sub">SMS + WhatsApp · 8 languages · 🚧 Coming soon</span>
             </div>
           </div>
 
@@ -353,6 +352,9 @@ export default function HomePage() {
             <Link className="btn btn-primary" href="/mock#brief">
               Read the event brief <span className="arrow">→</span>
             </Link>
+            <a className="btn btn-ghost" href="https://github.com/msg2ai/conference-team-skills" target="_blank" rel="noopener noreferrer">
+              View on GitHub <span className="arrow">→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -421,7 +423,7 @@ export default function HomePage() {
               <ol>
                 <li>Install via the recommended path</li>
                 <li>Run the connector setup wizard</li>
-                <li>Add your event website (Vercel) and an attendee helpdesk (AI Ambassador)</li>
+                <li>Add your event website (Vercel)</li>
                 <li>You&apos;re now running an event with an 8-person AI back office.</li>
               </ol>
               <a className="btn btn-ghost" href="https://github.com/msg2ai/conference-team-skills#connecting-integrations-optional-but-recommended">
@@ -568,7 +570,6 @@ export default function HomePage() {
               <h5>MSG2AI &amp; sister products</h5>
               <ul>
                 <li><a href="https://msg2ai.xyz">msg2ai.xyz</a></li>
-                <li><a href="https://hello.msg2ai.xyz">hello.msg2ai.xyz</a></li>
                 <li><a href="https://ai-ambassador.xyz">AI Ambassador</a></li>
                 <li><a href="https://actionnotes.ai">ActionNotes</a></li>
                 <li><a href="mailto:info@msg2ai.xyz">info@msg2ai.xyz</a></li>
@@ -594,7 +595,7 @@ export default function HomePage() {
           <div className="footer-bottom">
             <div>
               © 2026 MSG2AI · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link> ·{" "}
-              <a href="https://github.com/msg2ai/conference-team-skills/blob/main/LICENSE">MIT License</a> · v1.0.3
+              <a href="https://github.com/msg2ai/conference-team-skills/blob/main/LICENSE">MIT License</a> · v1.0.4
             </div>
             <div>For organizers, by organizers.</div>
           </div>

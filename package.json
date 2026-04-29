@@ -1,6 +1,6 @@
 {
   "name": "conference-team-skills-website",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "private": true,
   "description": "Marketing site for the Conference Team Skills (8 free Claude Skills for conference organizing teams). Built with Next.js 16. Deploys to Vercel.",
   "scripts": {
