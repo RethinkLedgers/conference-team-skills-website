@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <p className="lede">
         No analytics. No cookies. No tracking. Here is exactly what happens to anything you type into this site.
       </p>
-      <p className="meta">Last updated: April 28, 2026 · v1.0</p>
+      <p className="meta">Last updated: April 28, 2026 · v1.0.4</p>
 
       <h2>About this page</h2>
       <p>
