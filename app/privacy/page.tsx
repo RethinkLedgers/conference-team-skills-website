@@ -4,7 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy · Conference Team Skills",
   description:
-    "No analytics. No cookies. No tracking. Here's exactly what happens to anything you type into the Conference Team Skills site.",
+    "How the Conference Team Skills marketing site handles your data — what we collect, what we don't, and what happens to anything you type in.",
+  alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
 };
 
 export default function PrivacyPage() {
@@ -15,7 +17,7 @@ export default function PrivacyPage() {
       </div>
       <h1 className="display">Privacy</h1>
       <p className="lede">
-        No analytics. No cookies. No tracking. Here is exactly what happens to anything you type into this site.
+        Minimal tracking. No marketing cookies. Here is exactly what happens to anything you type into this site.
       </p>
       <p className="meta">Last updated: April 28, 2026 · v1.0.4</p>
 
@@ -24,16 +26,27 @@ export default function PrivacyPage() {
         The <strong>Conference Team Skills</strong> repository at{" "}
         <a href="https://github.com/msg2ai/conference-team-skills">github.com/msg2ai/conference-team-skills</a>{" "}
         is an open-source collection of Claude Skills released by MSG2AI. This marketing site is a
-        statically-rendered Next.js bundle served from Vercel — there is no backend, no analytics SDK, and no
-        third-party tracking attached to the application code.
+        statically-rendered Next.js bundle served from Vercel — there is no backend and no third-party
+        tracking attached beyond the optional analytics described below.
       </p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li>
+          <strong>Google Analytics 4 (aggregate, anonymized).</strong> When the site is deployed with a GA
+          measurement ID configured, <code>gtag.js</code> records page views and basic device/region metadata
+          via cookies it sets in your browser. We use this only to understand which pages and CTAs are
+          working. We do not sell or share this data. You can opt out by enabling Do-Not-Track or any
+          standard ad-blocker.
+        </li>
+      </ul>
 
       <h2>What we don't collect</h2>
       <ul>
-        <li>We do not run any analytics service (no Google Analytics, no Plausible, no PostHog, etc.).</li>
-        <li>We do not set cookies of any kind from this site.</li>
-        <li>We do not log IP addresses, user agents, or referrers in our application.</li>
-        <li>We do not embed third-party trackers, pixels, or fingerprinting scripts.</li>
+        <li>We do not run any other analytics service (no Plausible, PostHog, Hotjar, etc.).</li>
+        <li>We do not set marketing or advertising cookies.</li>
+        <li>We do not log IP addresses, user agents, or referrers in our application code.</li>
+        <li>We do not embed advertising trackers, pixels, or fingerprinting scripts.</li>
       </ul>
 
       <h2>Vercel hosting</h2>

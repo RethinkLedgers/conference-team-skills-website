@@ -176,13 +176,77 @@ const CONNECTORS = [
   { name: "Obsidian", desc: "Institutional memory across years." },
 ];
 
+const SITE_URL = "https://conference-team-skills-website.vercel.app";
+
+const FAQ_ENTRIES = [
+  {
+    q: "Do I need to know how to code?",
+    a: "No. The browser path is just copy-paste into Claude.ai. The whole reason these are 'skills' rather than software is that the work happens in plain English — yours, going in, and Claude's, coming back.",
+  },
+  {
+    q: "Will Claude make things up about my event?",
+    a: "Claude will produce a plausible draft from whatever context you give it. The skills are written to ask for the missing pieces first — event date, scale, audience — before producing output. Treat the first response as a strong first draft, not a final answer.",
+  },
+  {
+    q: "Is my conference data safe?",
+    a: "Your conversations stay in your Claude account. The skills don't send anything anywhere on their own — the only data Claude sees is what you paste or what's reachable through integrations you choose to connect.",
+  },
+  {
+    q: "What does it cost?",
+    a: "The skills are free, open source (MIT). You pay for Claude — Claude.ai has a free tier and a $20/mo Pro plan that covers most organizers.",
+  },
+  {
+    q: "What if our committee is not a tech team?",
+    a: "That's the most common case. Use the Claude.ai browser path. Each committee member loads whichever skill matches their role and starts a conversation — no terminal, no install.",
+  },
+];
+
+const SOFTWARE_APP_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Conference Team Skills",
+  description:
+    "Eight open-source Claude Skills covering every role on a conference organizing committee — Conference Chair, Program Director, Head of Sponsorship, CMO, Head of Operations, CFO, Chief Experience Officer, and a Vibe Coder for the event website.",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web, macOS, Windows, Linux",
+  url: SITE_URL,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  license: "https://github.com/msg2ai/conference-team-skills/blob/main/LICENSE",
+  softwareVersion: "1.0.4",
+  publisher: {
+    "@type": "Organization",
+    name: "MSG2AI",
+    url: "https://msg2ai.xyz",
+    logo: `${SITE_URL}/logos/msg2ai.jpg`,
+  },
+  codeRepository: "https://github.com/msg2ai/conference-team-skills",
+};
+
+const FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ_ENTRIES.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_LD) }}
+      />
       <header className="topbar">
         <div className="topbar-inner">
           <a href="https://msg2ai.xyz" className="brand" target="_blank" rel="noopener noreferrer">
-            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" />
+            <img src="/logos/msg2ai.jpg" alt="MSG2AI" className="brand-logo" width={32} height={32} />
             <span>msg2ai<span className="dot">.</span></span>
           </a>
           <nav className="topnav">
@@ -217,6 +281,9 @@ export default function HomePage() {
             </a>
             <a className="btn btn-ghost" href="#mock">
               See real examples
+            </a>
+            <a className="btn btn-ghost" href="https://github.com/msg2ai/conference-team-skills" target="_blank" rel="noopener noreferrer">
+              View on GitHub <span className="arrow">→</span>
             </a>
           </div>
           <div className="hero-meta">
@@ -475,7 +542,7 @@ export default function HomePage() {
                 <div className="product-plugs">
                   <a className="product-plug" href="https://ai-ambassador.xyz">
                     <div className="product-logo-bar">
-                      <img src="/logos/ai-ambassador.png" alt="AI Ambassador for Events" className="product-logo product-logo-wide" />
+                      <img src="/logos/ai-ambassador.png" alt="AI Ambassador for Events" className="product-logo product-logo-wide" width={200} height={48} loading="lazy" decoding="async" />
                     </div>
                     <span className="product-tag">SMS · WhatsApp · RCS coming soon</span>
                     <p>Replaces the pesky conference app. Answers every attendee question by text in 126 languages, sends session reminders, runs networking matches, and ships the post-event NPS — all in 30-second responses, no download required.</p>
@@ -484,7 +551,7 @@ export default function HomePage() {
 
                   <a className="product-plug" href="https://actionnotes.ai">
                     <div className="product-logo-bar">
-                      <img src="/logos/actionnotes.png" alt="ActionNotes" className="product-logo product-logo-square" />
+                      <img src="/logos/actionnotes.png" alt="ActionNotes" className="product-logo product-logo-square" width={48} height={48} loading="lazy" decoding="async" />
                       <strong>ActionNotes</strong>
                     </div>
                     <span className="product-tag">AI session &amp; meeting capture</span>
