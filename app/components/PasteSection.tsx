@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const RAW_BASE = "https://raw.githubusercontent.com/msg2ai/conference-team-skills/main";
 const SKILL_NAMES = [
@@ -16,8 +16,26 @@ const SKILL_NAMES = [
 
 type Tab = "claudeai" | "claudecode" | "codex" | "cursor";
 
+const HASH_TO_TAB: Record<string, Tab> = {
+  "paste-claudeai": "claudeai",
+  "paste-claudecode": "claudecode",
+  "paste-codex": "codex",
+  "paste-cursor": "cursor",
+};
+
 export default function PasteSection() {
   const [tab, setTab] = useState<Tab>("claudeai");
+
+  useEffect(() => {
+    const sync = () => {
+      const hash = window.location.hash.slice(1);
+      const next = HASH_TO_TAB[hash];
+      if (next) setTab(next);
+    };
+    sync();
+    window.addEventListener("hashchange", sync);
+    return () => window.removeEventListener("hashchange", sync);
+  }, []);
 
   return (
     <section id="paste" className="paste-section">
