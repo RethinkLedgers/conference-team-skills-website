@@ -202,7 +202,7 @@ export default function HomePage() {
           <div className="eyebrow">
             <span className="pulse" />
             Free · 8 AI teammates · No code required
-            <span className="version-badge">v1.0</span>
+            <span className="version-badge">v1.0.3</span>
           </div>
           <h1 className="display">
             8 Claude Skills <em>for your conference team.</em>
@@ -468,7 +468,7 @@ export default function HomePage() {
               <summary>What&apos;s the catch?</summary>
               <div className="answer">
                 <p>There isn&apos;t one. We build AI tools for events at <a href="https://msg2ai.xyz">msg2ai.xyz</a>, and we open-sourced the skills because we wanted every conference team to have a real back office. The skills, the mock conference, the website, the npm installer — all free, MIT licensed.</p>
-                <p style={{ marginTop: 14 }}>The way <a href="https://msg2ai.xyz">MSG2AI</a> makes money is by selling two paid products that the skills know how to call into on show day:</p>
+                <p style={{ marginTop: 14 }}>The way <a href="https://msg2ai.xyz">MSG2AI</a> makes money is by selling two paid products. The skills work fully on their own, but the option exists to do tighter integration with these tools when you want a more connected show-day experience:</p>
 
                 <div className="product-plugs">
                   <a className="product-plug" href="https://ai-ambassador.xyz">
@@ -594,7 +594,7 @@ export default function HomePage() {
           <div className="footer-bottom">
             <div>
               © 2026 MSG2AI · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link> ·{" "}
-              <a href="https://github.com/msg2ai/conference-team-skills/blob/main/LICENSE">MIT License</a> · v1.0
+              <a href="https://github.com/msg2ai/conference-team-skills/blob/main/LICENSE">MIT License</a> · v1.0.3
             </div>
             <div>For organizers, by organizers.</div>
           </div>
